@@ -6,15 +6,16 @@ namespace AutoReservation.Dal.Entities
 {
  public abstract class Auto
     {
-        int Id { get; set; }
-        string Marke { get; set; }
-        byte[] RowVersion { get; set; }
-        int Tagestarif { get; set; }
+        public int Id { get; set; }
+        public string Marke { get; set; }
+        public byte[] RowVersion { get; set; }
+        public int Tagestarif { get; set; }
+        public virtual DbSet<Reservation> Reservationen { get; set; }
     }
 
 public class LuxusklasseAuto : Auto
     {
-        int BasisTarif { get; set; }
+        public int BasisTarif { get; set; }
     }
 
 public class MittelKlasseAuto : Auto { }

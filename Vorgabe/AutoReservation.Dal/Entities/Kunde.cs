@@ -7,10 +7,11 @@ namespace AutoReservation.Dal.Entities
 {
   public class Kunde
     {
-        DateTime Geburtsdatum { get; set; }
-        int Id { get; set; }
-        string Nachname { get; set; }
-        byte[] RowVersion { get; set; }
-        string Vorname { get; set; }
+        public DateTime Geburtsdatum { get; set; }
+        public int Id { get; set; }
+        public string Nachname { get; set; }
+        public byte[] RowVersion { get; set; }
+        public string Vorname { get; set; }
+        public virtual DbSet<Reservation> Reservationen { get; set; }
     }
 }

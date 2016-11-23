@@ -6,9 +6,9 @@ namespace AutoReservation.Dal
 {
     public class AutoReservationContext : DbContext
     {
-        DbSet<Auto> Autos { get; set; }
-        DbSet<Kunde> Kunden { get; set; }
-        DbSet<Reservation> Reservationen { get; set; }
+        public DbSet<Auto> Autos { get; set; }
+        public DbSet<Kunde> Kunden { get; set; }
+        public DbSet<Reservation> Reservationen { get; set; }
 
         public AutoReservationContext()
         {

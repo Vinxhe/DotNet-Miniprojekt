@@ -17,7 +17,7 @@ namespace AutoReservation.TestEnvironment
             using (AutoReservationContext context = new AutoReservationContext())
             {
                 var luxusklasseAutoTableName = context.GetTableName<LuxusklasseAuto>();
-                var mittelklasseAutoTableName = context.GetTableName<MittelklasseAuto>();
+                var mittelklasseAutoTableName = context.GetTableName<MittelKlasseAuto>();
                 var standardAutoTableName = context.GetTableName<StandardAuto>();
                 var autoTableName = context.GetTableName<Auto>();
                 var kundeTableName = context.GetTableName<Kunde>();
@@ -96,8 +96,8 @@ namespace AutoReservation.TestEnvironment
             new List<Auto>
             {
                 new StandardAuto {Id = 1, Marke = "Fiat Punto", Tagestarif = 50},
-                new MittelklasseAuto {Id = 2, Marke = "VW Golf", Tagestarif = 120},
-                new LuxusklasseAuto {Id = 3, Marke = "Audi S6", Tagestarif = 180, Basistarif = 50},
+                new MittelKlasseAuto{Id = 2, Marke = "VW Golf", Tagestarif = 120},
+                new LuxusklasseAuto {Id = 3, Marke = "Audi S6", Tagestarif = 180, BasisTarif= 50},
             };
 
         private static List<Reservation> Reservationen =>
